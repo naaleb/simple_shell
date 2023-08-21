@@ -3,6 +3,7 @@ This is a simple shell project written in C that implements a basic command-line
 
 
 #Features:
+
  •	Displays a prompt and waits for the user to type a command.
  
  •	The prompt is redisplayed after each command execution.
@@ -40,9 +41,12 @@ This is a simple shell project written in C that implements a basic command-line
  exit 
 
 #Authors:
+
 •	Hermas
+
 •	Almond
 
 #Contributions:
+
 Contributions to this project are welcome! If you encounter any issues or would like to suggest improvements, please create an issue or submit a pull request.
  
