@@ -14,7 +14,7 @@ This is a simple shell project written in C that implements a basic command-line
  
  •	Handles cases where an executable program cannot be found, showing an error message before displaying the prompt again.
  
- •	Handles errors gracefully.
+ •	Handles errors.
  
  •	Recognizes the "end of file" condition (Ctrl+D).
  
