@@ -1,8 +1,9 @@
 # Simple Shell Project
 This is a simple shell project written in C that implements a basic command-line interface. The shell allows users to input simple commands and executes them. 
+
 It was authored by Hermas and Almond.
 
-#Features
+#Features:
  •	Displays a prompt and waits for the user to type a command.
  •	The prompt is redisplayed after each command execution.
  •	Supports simple command lines with no semicolons, pipes, redirections, or advanced features.
@@ -14,7 +15,9 @@ It was authored by Hermas and Almond.
  •	Handles the PATH to locate executable programs.
  •	Implements the exit built-in command, allowing users to exit the shell. Usage: exit.
  •	Implements the env built-in command, which prints the current environment.
-#Usage
+
+
+#Usage:
  1.	Clone the repository to your local machine:
  	https://github.com/naaleb/simple_shell.git
  2.	Navigate to the project directory:
@@ -27,10 +30,10 @@ It was authored by Hermas and Almond.
  6.	To exit the shell, use the built-in exit command:
  exit 
 
-#Authors
+#Authors:
 •	Hermas
 •	Almond
 
-#Contributions
- Contributions to this project are welcome! If you encounter any issues or would like to suggest improvements, please create an issue or submit a pull request.
+#Contributions:
+Contributions to this project are welcome! If you encounter any issues or would like to suggest improvements, please create an issue or submit a pull request.
  
