@@ -1,37 +1,94 @@
 #include "shell.h"
 
 /**
- * main - Entry point
- *
- * Return: Always 0
+ * main - Entry point for the simple shell loop.
+ * This function is the central loop of the simple shell program.
+ * It manages user input, command parsing, execution, and output.
+ * The loop continues until the user exits the shell.
+ * Return: 0 on successful execution.
  */
 int main(void)
 {
-	char *command;
+	char *line = NULL;
+	size_t len = 0;
+	ssize_t read;
 
 	while (1)
 	{
-		printf("($) ");
-		command = read_command();
-		printf("You entered: %s", command);
-		free(command);
+		char **args;
+
+		print_prompt();
+
+		read = getline(&line, &len, stdin);
+
+		if (read == -1)
+		{
+			if (feof(stdin))
+			{
+				printf("\n");
+				break;
+			}
+			perror("getline");
+			exit(EXIT_FAILURE);
+		}
+
+		args = parse_line(line);
+
+		free(args);
 	}
 
-	return (0);
+	free(line);
+	exit(EXIT_SUCCESS);
 }
 
 /**
- * read_command - Reads a line of input from the user
- *
- * Return: Pointer to the input line
+ * print_prompt - Display the shell prompt.
+ * This function prints the prompt
+ *		indicating that the shell is ready for input.
  */
-char *read_command(void)
+void print_prompt(void)
 {
-	char *line = NULL;
-	size_t bufsize = 0;
+	printf("$ ");
+}
 
-	getline(&line, &bufsize, stdin);
+/**
+ * parse_line - Parse the command line into arguments.
+ * @line: The input command line.
+ * Return: An array of pointers to the parsed arguments.
+ */
+char **parse_line(char *line)
+{
+	int bufsize = TOKEN_SIZE;
+	int position = 0;
+	char **tokens = malloc(bufsize * sizeof(char *));
+	char *token;
 
-	return (line);
+	if (!tokens)
+	{
+		fprintf(stderr, "Allocation error\n");
+		exit(EXIT_FAILURE);
+	}
+
+	token = strtok(line, DELIMITERS);
+	while (token != NULL)
+	{
+		tokens[position] = token;
+		position++;
+
+		if (position >= bufsize)
+		{
+			bufsize += TOKEN_SIZE;
+			tokens = realloc(tokens, bufsize * sizeof(char *));
+			if (!tokens)
+			{
+				fprintf(stderr, "Allocation error\n");
+				exit(EXIT_FAILURE);
+			}
+		}
+
+		token = strtok(NULL, DELIMITERS);
+	}
+	tokens[position] = NULL;
+	return (tokens);
 }
 
