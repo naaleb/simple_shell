@@ -3,17 +3,21 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include <unistd.h>
+#include <string.h>
 #include <sys/types.h>
 #include <sys/wait.h>
 
-#define MAX_COMMAND_LENGTH 1024
+/* Define constants */
+#define BUFFER_SIZE 1024
+#define TOKEN_SIZE 64
+#define DELIMITERS " \t\n\r\a"
 
 /* Function prototypes */
-char *read_command(void);
-char **split_command(char *command);
-void execute_command(char **args);
+void print_prompt(void);
+char *read_line(void);
+char **parse_line(char *line);
+int execute_command(char **args);
 void free_args(char **args);
 
 #endif /* SHELL_H */
