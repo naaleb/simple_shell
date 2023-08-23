@@ -39,8 +39,8 @@ int main(void)
 
 /**
  * print_prompt - Display the shell prompt.
- * This function prints the prompt 
- *		indicating that the shell is ready for input.
+ * This function prints the prompt
+ *	indicating that the shell is ready for input.
  */
 void print_prompt(void)
 {
