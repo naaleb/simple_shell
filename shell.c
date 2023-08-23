@@ -8,11 +8,11 @@
  *
  * Return: Always 0 (Success)
  */
-int main(int ac, char **_av, char **env)
+int main(int ac, char **av, char **env)
 {
 	if (ac == 1)
 	{
-		shell_prompt(_av, env);
+		shell_prompt(av, env);
 	}
 	return (0);
 }
