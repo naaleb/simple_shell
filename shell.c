@@ -3,7 +3,7 @@
 /**
  * main - shell program entry point
  * @ac: Argument count
- * @_av: Argument vector
+ * @av: Argument vector
  * @env: Environment variables
  *
  * Return: Always 0 (Success)
