@@ -1,5 +1,5 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef SHELL_H
+#define SHELL_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -16,5 +16,5 @@ char **split_command(char *command);
 void execute_command(char **args);
 void free_args(char **args);
 
-#endif /* MAIN_H */
+#endif /* SHELL_H */
 
