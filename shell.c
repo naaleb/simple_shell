@@ -4,7 +4,7 @@
  * main - shell program entry point
  * @ac: Argument count
  * @av: Argument vector
- * @env: Environment variables
+ * @env: Environment variable
  *
  * Return: Always 0 (Success)
  */
