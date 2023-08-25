@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * _erratoi – Function to convert string to an integer
+ * _erratoi – A function to convert string to an integer
  * @s: The string to convert
  * Return: No numbers in string return 0, convert number or
  *       -1 on error
