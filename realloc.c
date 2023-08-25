@@ -2,10 +2,10 @@
 
 /**
  * _memset – Funct. to fill memory with a constant byte
- * @s: Pointer to memory area
- * @b: Byte to fill *s with
+ * @s: Ptr to where memorry is located
+ * @b: Fill *s with bytes
  * @n: Amount of bytes to fill
- * Return: (s) , pointer to the memory area s
+ * Return: (s) , Ptr to the memory area s
  */
 char *_memset(char *s, char b, unsigned int n)
 {
