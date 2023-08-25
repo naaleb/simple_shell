@@ -23,8 +23,8 @@ int is_cmd(info_t *info, char *path)
 }
 
 /**
- * dup_chars - duplicates characters
- * @pathstr: PATH string
+ * dup_chars - Function to duplicate characters
+ * @pathstr: PATH str
  * @start: Index to start
  * @stop: Index to stop
  *
