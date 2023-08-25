@@ -3,7 +3,7 @@
 /**
  * get_environ – Function to return string array copy of our environ
  * @info: Struct that contains potential arguments used to maintain
- *          constant function prototype.
+ * constant function prototype.
  * Return: Always (0)
  */
 char **get_environ(info_t *info)
@@ -18,10 +18,10 @@ char **get_environ(info_t *info)
 }
 
 /**
- * _unsetenv - Removes environ variable
+ * _unsetenv -Func that removes environ variable
  * @info: Structure that contains potential arguments used to maintain
- *        constant function prototype.
- *  Return: return 1 on delete, 0 otherwise
+ * constant function prototype.
+ * Return: return 1 on delete, and  0 otherwise
  * @var: the string environ variable property
  */
 int _unsetenv(info_t *info, char *var)
